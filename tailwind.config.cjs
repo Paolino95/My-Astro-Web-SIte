@@ -1,13 +1,10 @@
 module.exports = {
-    content: [
-      "./src/**/*.{astro,js,ts,jsx,tsx,vue}",
-    ],
+    darkMode: 'class',
+    content: ['./src/**/*.{astro,js,ts,jsx,tsx,vue}'],
     theme: {
-      extend: {
-        colors: {
-          'test-blue': '#333377',
-        }
-      },
+        extend: {
+            colors: {},
+        },
     },
     plugins: [],
-  }
+};

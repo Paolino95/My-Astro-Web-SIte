@@ -1,7 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import MainHead from "../components/MainHead.astro";
+import Body from '../components/Body.astro';
+import Header from "../components/Header.astro";
+
+import '../styles/index.css'
 ---
 
-<Layout></Layout>
-
-<script src="https://kit.fontawesome.com/35a49b7f55.js" crossorigin="anonymous"></script>
+<html lang="en">
+    <head>
+        <MainHead />
+    </head>
+    <Body>
+        <Header></Header>
+    </Body>
+</html>
