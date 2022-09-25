@@ -30,7 +30,7 @@
 
     const items = [
         { name: 'Posts', href: './posts' },
-        { name: `What I've use`, href: './wiu' },
+        { name: `What I use`, href: './wiu' },
     ];
 
     let toggleInput = ref(false);

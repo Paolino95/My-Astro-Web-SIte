@@ -1,30 +1,38 @@
 ---
-import ToggleThemeButton from "../vue/ToggleThemeButton.vue";
-import DropdownMenu from "../vue/DropdownMenu.vue";
+import ToggleThemeButton from '../vue/ToggleThemeButton.vue';
+import DropdownMenu from '../vue/DropdownMenu.vue';
 ---
 
 <header class="fixed w-full p-3 z-20 backdrop-blur-md">
     <div class="mx-auto max-w-3xl">
         <nav class="flex justify-between items-center text-lg">
-            <div class="flex flex-row items-center gap-2">
-                <a href='./' class="flex flex-row items-center">
+            <div class="flex flex-row items-center gap-4">
+                <a href="./" class="flex flex-row items-center">
                     <i class="fa-brands fa-reddit text-3xl"></i>
                     <h2 class="font-semibold p-2 tracking-tight italic">Paolino_95</h2>
                 </a>
-                <a href='/posts' class="items-center text-sm italic hover-underline hidden md:block">Posts
+                <a
+                    href="/posts"
+                    class="items-center text-base italic hover-underline hidden md:block"
+                    >Posts
                 </a>
-                <a href='./wiu' class="items-center text-sm italic hover-underline hidden md:block">
-                What I've use
+                <a
+                    href="./wiu"
+                    class="items-center text-base italic hover-underline hidden md:block"
+                >
+                    What I use
                 </a>
             </div>
- 
+
             <div class="items-center flex gap-3">
-                <ToggleThemeButton client:load/>
-                <a href='https://github.com/Paolino95' target='_blank'>
-                    <i class="buttons-transition fa-brands fa-github text-3xl hover:text-zinc-600 dark:hover:text-slate-400"></i>
+                <ToggleThemeButton client:load />
+                <a href="https://github.com/Paolino95" target="_blank">
+                    <i
+                        class="buttons-transition fa-brands fa-github text-3xl hover:text-zinc-600 dark:hover:text-slate-400"
+                    ></i>
                 </a>
-                <DropdownMenu client:load/>
+                <DropdownMenu client:load />
             </div>
         </nav>
     </div>
-</header>  
+</header>
