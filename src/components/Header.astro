@@ -1,22 +1,39 @@
 ---
 import ToggleThemeButton from "./ToggleThemeButton.vue";
+import DropdownMenu from "./DropdownMenu.astro";
+
+const dropDownMenuItems = [
+    {name: 'Posts', href: './Posts'}, {name: `What I've use`, href: './WhatIUse'}
+];
+
 ---
 
 <header class="fixed w-full p-3 z-20 backdrop-blur-md">
     <div class="mx-auto max-w-3xl">
         <nav class="flex justify-between items-center text-lg">
-            <a href='./' class="flex flex-row items-center hover:text-zinc-600 dark:hover:text-slate-400">
-                <i class="fa-brands fa-reddit text-3xl gap-1"></i>
-                <h2 class="font-semibold p-2 tracking-tight italic">Paolino_95</h2>
-            </a>
+            <div class="flex flex-row items-center gap-2">
+                <a href='./' class="flex flex-row items-center">
+                    <i class="fa-brands fa-reddit text-3xl"></i>
+                    <h2 class="font-semibold p-2 tracking-tight italic">Paolino_95</h2>
+                </a>
+                <a href='/Post' class="items-center text-sm italic hover-underline hidden md:block">Posts
+                </a>
+                <a href='./WhatIUse' class="items-center text-sm italic hover-underline hidden md:block">
+                What I've use
+                </a>
+            </div>
+ 
             <div class="items-center flex gap-3">
                 <ToggleThemeButton client:load/>
                 <a href='https://github.com/Paolino95' target='_blank'>
                     <i class="buttons-transition fa-brands fa-github text-3xl hover:text-zinc-600 dark:hover:text-slate-400"></i>
                 </a>
-                <button>
+                <button class="block md:hidden">
                     <i class="buttons-transition fa-solid fa-bars text-2xl hover:text-zinc-600 dark:hover:text-slate-400"></i>
                 </button>
+                <div class="block md:hidden absolute w-52 top-2">
+                    <DropdownMenu items={dropDownMenuItems}/>
+                </div>
             </div>
         </nav>
     </div>

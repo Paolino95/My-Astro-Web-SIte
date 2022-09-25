@@ -1,0 +1,19 @@
+---
+
+interface Item {
+    name: string;
+    href: string;
+}
+
+export interface Props {
+    items: Array<Item>
+}
+
+const {items} = Astro.props as Props
+---
+    
+<div>
+    {items.map(item => {
+        <a href={item.href} class="h-4">{item.name}</a>
+    })}
+</div>

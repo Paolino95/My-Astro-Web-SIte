@@ -1,0 +1,15 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Body from '../components/Body.astro';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<head>
+    <MainHead />
+</head>
+<Body>
+    <Header />
+    <slot name="main" />
+    <Footer />
+</Body>
