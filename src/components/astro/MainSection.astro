@@ -1,0 +1,22 @@
+---
+export interface Props {
+    title?: string;
+    image?: string;
+    content: string;
+}
+
+const { title, image, content } = Astro.props;
+---
+
+<section class="flex p-4">
+    <div class="flex flex-col md:flex-row items-center justify-center">
+        <img
+            class="w-48 md:w-56 transition duration-150 ease-out rounded-full border-2 m-4 border-zinc-900 dark:border-slate-100"
+            src={image}
+        />
+        <div class="md:w-1/2 flex flex-col p-4 md:p-2">
+            <h1 class="font-semibold italic uppercase mb-2">{title}</h1>
+            <span class="text-sm md:text-base">{content}</span>
+        </div>
+    </div>
+</section>

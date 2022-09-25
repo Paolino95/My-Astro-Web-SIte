@@ -25,6 +25,5 @@
     import { useDark, useToggle } from '@vueuse/core';
 
     const isDark = useDark();
-    console.log({ isDark });
     const toggleDark = useToggle(isDark);
 </script>
