@@ -1,11 +1,6 @@
 ---
-import ToggleThemeButton from "./ToggleThemeButton.vue";
-import DropdownMenu from "./DropdownMenu.astro";
-
-const dropDownMenuItems = [
-    {name: 'Posts', href: './Posts'}, {name: `What I've use`, href: './WhatIUse'}
-];
-
+import ToggleThemeButton from "../vue/ToggleThemeButton.vue";
+import DropdownMenu from "../vue/DropdownMenu.vue";
 ---
 
 <header class="fixed w-full p-3 z-20 backdrop-blur-md">
@@ -28,12 +23,7 @@ const dropDownMenuItems = [
                 <a href='https://github.com/Paolino95' target='_blank'>
                     <i class="buttons-transition fa-brands fa-github text-3xl hover:text-zinc-600 dark:hover:text-slate-400"></i>
                 </a>
-                <button class="block md:hidden">
-                    <i class="buttons-transition fa-solid fa-bars text-2xl hover:text-zinc-600 dark:hover:text-slate-400"></i>
-                </button>
-                <div class="block md:hidden absolute w-52 top-2">
-                    <DropdownMenu items={dropDownMenuItems}/>
-                </div>
+                <DropdownMenu client:load/>
             </div>
         </nav>
     </div>
