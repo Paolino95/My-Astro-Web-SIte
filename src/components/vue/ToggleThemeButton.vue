@@ -1,5 +1,5 @@
 <template>
-    <div class="mr-2">
+    <div class="ml-2">
         <input
             type="checkbox"
             class="absolute opacity-0"

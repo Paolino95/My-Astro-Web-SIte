@@ -1,16 +1,26 @@
 ---
-import MainSection from '../components/astro/MainSection.astro';
 import Layout from '../layouts/Layout.astro';
+import me from '/logo.png';
 import '../styles/index.css';
-// import myImage from '/me.jpg';
 ---
 
 <html lang="en">
     <Layout>
-        <MainSection
-            title="Ciao, sono Paolino_95"
-            image="https://via.placeholder.com/150"
-            content="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        />
+        <section class="relative h-80 flex items-center justify-center p-4">
+            <div class="absolute overflow-hidden">
+                <img
+                    class="w-96 md:w-56 transition duration-300 ease-out rounded-full border-2 m-4 border-zinc-900 dark:border-slate-100"
+                    src={me}
+                />
+            </div>
+            <div class="italic z-10">
+                <div class="font-semibold text-3xl uppercase mb-2">Ciao</div>
+                <div class="text-4xl">sono <span class="text-orange-300">Paolino_95</span></div>
+            </div>
+        </section>
+        <div class="p-4">
+            .....e sono un frontend web developer. Mi chiamo Massimiliano Paolone, ho 26 anni e
+            scrivo codice. Ogni tanto.
+        </div>
     </Layout>
 </html>
