@@ -1,8 +1,8 @@
 ---
-import ToggleThemeButton from '../vue/ToggleThemeButton.vue';
+// import ToggleThemeButton from '../vue/ToggleThemeButton.vue';
 import DropdownMenu from '../vue/DropdownMenu.vue';
 
-import logo from '/logo.png';
+import logo from '/logo-transparent.png';
 ---
 
 <header class="fixed w-full p-3 z-20 backdrop-blur-md">
@@ -10,10 +10,7 @@ import logo from '/logo.png';
         <nav class="flex justify-between items-center text-lg">
             <div class="flex flex-row items-center gap-4">
                 <a href="./" class="flex flex-row items-center">
-                    <img
-                        src={logo}
-                        class="rounded-full h-8 w-8 md:w-14 md:h-14 border border-zinc-900 dark:border-zinc-100"
-                    />
+                    <img src={logo} class="rounded-full h-8 w-8 md:w-14 md:h-14 border-0" />
                     <h2 class="font-semibold p-2 tracking-tight italic">Paolino_95</h2>
                 </a>
                 <a
@@ -29,13 +26,10 @@ import logo from '/logo.png';
                 </a>
             </div>
 
-            <div
-                class="items-center flex gap-3 border-0 border-l border-zinc-900 dark:border-zinc-100"
-            >
-                <ToggleThemeButton client:load />
-                <a href="https://github.com/Paolino95" target="_blank">
-                    <i
-                        class="buttons-transition fa-brands fa-github text-3xl hover:text-zinc-600 dark:hover:text-slate-400"
+            <div class="items-center flex gap-3 border-0 border-l border-zinc-100">
+                <!-- <ToggleThemeButton client:load /> -->
+                <a href="https://github.com/Paolino95" target="_blank" class="ml-4">
+                    <i class="buttons-transition fa-brands fa-github text-3xl hover:text-slate-400"
                     ></i>
                 </a>
                 <DropdownMenu client:load />
